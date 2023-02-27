@@ -22,6 +22,12 @@ print(email.split('@')[1].split('.')) # return list
 
 print(sentence.replace('!', ':)'))
 
+# f-string
+names = ['Tom', 'David', 'Alice']
+for name in names:
+    print(f'My name is {name}.')
+
+
 
 
 # Indexing and Slicing
@@ -98,14 +104,14 @@ print(people[2]['name'])
 
 # for loop
 people = [
-{'name': 'bob', 'age': 20},
-{'name': 'carry', 'age': 38},
-{'name': 'john', 'age': 7},
-{'name': 'smith', 'age': 17},
-{'name': 'ben', 'age': 27},
-{'name': 'bobby', 'age': 57},
-{'name': 'red', 'age': 32},
-{'name': 'queen', 'age': 25}
+    {'name': 'bob', 'age': 20},
+    {'name': 'carry', 'age': 38},
+    {'name': 'john', 'age': 7},
+    {'name': 'smith', 'age': 17},
+    {'name': 'ben', 'age': 27},
+    {'name': 'bobby', 'age': 57},
+    {'name': 'red', 'age': 32},
+    {'name': 'queen', 'age': 25}
 ]
 
 for person in people:
@@ -153,13 +159,6 @@ b = set(['apple', 'melon'])
 print(a & b) # intersection
 print(a | b) # union
 print(a - b) # except
-
-
-
-# f-string
-names = ['Tom', 'David', 'Alice']
-for name in names:
-    print(f'My name is {name}.')
 
 
 
@@ -227,14 +226,14 @@ print(b_list)
 
 # map, filter, lambda
 people = [
-{'name': 'bob', 'age': 20},
-{'name': 'carry', 'age': 38},
-{'name': 'john', 'age': 7},
-{'name': 'smith', 'age': 17},
-{'name': 'ben', 'age': 27},
-{'name': 'bobby', 'age': 57},
-{'name': 'red', 'age': 32},
-{'name': 'queen', 'age': 25}
+    {'name': 'bob', 'age': 20},
+    {'name': 'carry', 'age': 38},
+    {'name': 'john', 'age': 7},
+    {'name': 'smith', 'age': 17},
+    {'name': 'ben', 'age': 27},
+    {'name': 'bobby', 'age': 57},
+    {'name': 'red', 'age': 32},
+    {'name': 'queen', 'age': 25}
 ]
 
 # map - manipulate the elements in list
