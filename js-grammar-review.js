@@ -6,6 +6,7 @@ let name2
 console.log(name2) // undefined
 
 
+
 // String Concat
 console.log('My' + ' car') // My car
 console.log('1' + 2) // 12
@@ -22,6 +23,7 @@ console.log(1 === '1') // strict (value + data type): false
 console.log(1 == '1') // true
 
 
+
 // Function Declaration
 function calculateAvg(price1, price2) {
     const sum = price1 + price2
@@ -35,6 +37,7 @@ const p1 = 1000
 const p2 = 2000
 const avg = calculateAvg(p1, p2)
 console.log(`The average price of two products is ${avg}`)
+
 
 
 // Class - reusable
@@ -90,6 +93,7 @@ const pants = new Clothes('Gray', 'M', 30000)
 
 skirt.printInfo()
 pants.printInfo()
+
 
 
 // Array
