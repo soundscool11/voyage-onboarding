@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Practice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <style>
+    .button-part {
+      display: flex;
+      height: 50px;
+    }
+  </style>
+  <script>
+    function checkResult() {
+      let a = ["apple", "pear"];
+      $("#q1").text(a[0]);
+
+      let b = { 'name': "kim", 'age': 30 };
+      $("#q2").text(b["name"]);
+
+      let c = [
+        { 'name': "kim", 'age': 30 },
+        { 'name': "lee", 'age': 35 },
+      ];
+      $('#q3').text(c[1]['age'])
+    }
+  </script>
+  <body>
+    <div class="top-part">
+      <h1>JavaScript Practice</h1>
+    </div>
+    <hr />
+    <br />
+    <h2>1. Function</h2>
+    <div class="button-part">
+      <button onclick="checkResult()">Check Result!</button>
+    </div>
+    <div class="list-part">
+      <h2>2. List</h2>
+      <div id="q1">Test</div>
+    </div>
+    <div class="dict-part">
+      <h2>3. Dictionary</h2>
+      <div id="q2">Test</div>
+    </div>
+    <div>
+      <h2>4. List Dictionary</h2>
+      <div id="q3">Test</div>
+    </div>
+  </body>
+</html>
