@@ -9,3 +9,4 @@ for row in rows:
     province = row['MSRSTE_NM']
     status = row['IDEX_MVL']
     print(province, status)
+
