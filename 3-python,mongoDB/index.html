@@ -116,7 +116,7 @@
                             let comment = a["comment"];
                             let image = a["image"];
                             let star = a["star"];
-                            let starImage = "⭐".repeat(star);
+                            let star_image = "⭐".repeat(star);
                             let temp_html = `<div class="col">
                                                 <div class="card h-100">
                                                     <img
@@ -127,7 +127,7 @@
                                                     <div class="card-body">
                                                         <h5 class="card-title">${title}</h5>
                                                         <p class="card-text">${desc}</p>
-                                                        <p>${starImage}</p>
+                                                        <p>${star_image}</p>
                                                         <p class="mycomment">${comment}</p>
                                                     </div>
                                                 </div>
