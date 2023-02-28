@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>자바스크립트 문법 연습하기!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<script>
+    function checkResult() {
+        let fruits = ["mango", "banana", "orange", 'strawberry']
+        $('#q1').empty()
+        fruits.forEach((a) => {
+            let temp_html = `<p>${a}</p>`
+            $('#q1').append(temp_html)
+        })
+
+        let people = [
+            {"name": "Min", "age": 22},
+            {"name": "Mike", "age": 12},
+            {"name": "Andy", "age": 23},
+            {"name": "Ann", "age": 43},
+            {"name": "John", "age": 23},
+            {"name": "Mark", "age": 11}
+        ]
+        $('#q2').empty()
+        people.forEach((a) => {
+            let name = a['name']
+            let age = a['age']
+            let temp_html = `<p>${name} is ${age} yr old.</p>`
+            $('#q2').append(temp_html)
+        })
+    }
+</script>
+
+<body>
+    <div class="top-part">
+        <h1>JavaScript Grammar</h1>
+    </div>
+    <hr />
+    <br>
+    <h2>1. Function</h2>
+    <div class="button-part">
+        <button onclick="checkResult()">Check Results!</button>
+    </div>
+    <div class="list-part">
+        <h2>2. Append</h2>
+        <div id="q1">
+            <p>apple</p>
+            <p>pear</p>
+            <p>pineapple</p>
+        </div>
+    </div>
+    <div class="list-part">
+        <h2>3. Append</h2>
+        <div id="q2">
+            <p>Sam is 25 yr old.</p>
+            <p>Alice is 23 yr old.</p>
+            <p>Tom is 19 yr old.</p>
+        </div>
+    </div>
+</body>
+
+</html>
