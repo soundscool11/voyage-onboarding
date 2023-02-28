@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learning Fetch</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      fetch("http://spartacodingclub.shop/sparta_api/seoulair")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          let rows = data["RealtimeCityAir"]["row"];
+          rows.forEach((a) => {
+            console.log(a["MSRSTE_NM"], a["IDEX_NM"]);
+          });
+        });
+    </script>
+  </head>
+  <body>
+    Fetch Practice
+  </body>
+</html>
