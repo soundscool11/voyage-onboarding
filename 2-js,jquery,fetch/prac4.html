@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Bicycle Lookup</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            div.question-box {
+                margin: 10px 0 20px 0;
+            }
+            table {
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                padding: 10px;
+                border: 1px solid;
+            }
+            .bikes-limit {
+                color: red;
+            }
+        </style>
+        <script>
+            function q1() {
+                fetch("http://spartacodingclub.shop/sparta_api/seoulbike")
+                    .then((res) => res.json())
+                    .then((data) => {
+                        $("#q1-table").empty();
+                        let rows = data["getStationList"]["row"];
+                        rows.forEach((a) => {
+                            let stationName = a["stationName"];
+                            let numOfRacks = a["rackTotCnt"];
+                            let numOfBikes = a["parkingBikeTotCnt"];
+                            let temp_html = `<tr>
+                                                <td>${stationName}</td>
+                                                <td>${numOfRacks}</td>
+                                                <td>${numOfBikes}</td>
+                                            </tr>`;
+                            if (numOfBikes < 5) {
+                                temp_html = `<tr class="bikes-limit">
+                                                <td>${stationName}</td>
+                                                <td>${numOfRacks}</td>
+                                                <td>${numOfBikes}</td>
+                                            </tr>`;
+                            }
+                            $("#q1-table").append(temp_html);
+                        });
+                    });
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JQuery + Ajax Practice!</h1>
+
+        <hr />
+
+        <div class="question-box">
+            <h2>1. Seoul OpenAPI(Real-time Bicycle Lookup)</h2>
+            <p>
+                Update the location and the number of bicycles available in
+                Seoul city.
+            </p>
+            <p>
+                By clicking Update button, the result should be newly updated.
+            </p>
+            <button onclick="q1()">Update</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bicycle Station Location</th>
+                        <th>The number of Racks</th>
+                        <th>The number of Bicycles available</th>
+                    </tr>
+                </thead>
+                <tbody id="q1-table"></tbody>
+            </table>
+        </div>
+    </body>
+</html>

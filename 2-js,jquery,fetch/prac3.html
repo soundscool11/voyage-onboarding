@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Particulate Matter API - Fetch Practice</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style type="text/css">
+      div.question-box {
+        margin: 10px 0 20px 0;
+      }
+
+      .danger-q1 {
+        color: red;
+      }
+    </style>
+
+    <script>
+      function q1() {
+        $("#names-q1").empty();
+        fetch("http://spartacodingclub.shop/sparta_api/seoulair")
+          .then((res) => res.json())
+          .then((data) => {
+            let rows = data["RealtimeCityAir"]["row"];
+            rows.forEach((a) => {
+              let province = a["MSRSTE_NM"];
+              let status = a["IDEX_MVL"];
+              let temp_html = `<li>${province} : ${status}</li>`;
+              if (status >= 40) {
+                temp_html = `<li class="danger-q1">${province} : ${status}</li>`;
+              }
+              $("#names-q1").append(temp_html);
+            });
+          });
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Fetch Practice!</h1>
+
+    <hr />
+
+    <div class="question-box">
+      <h2>1. Seoul OpenAPI(Real-time Particulate Matter Estimation)</h2>
+      <p>Update particulate matter result for all provinces.</p>
+      <p>By clicking Update button, the result should be newly updated.</p>
+      <button onclick="q1()">Update</button>
+      <ul id="names-q1"></ul>
+    </div>
+  </body>
+</html>
