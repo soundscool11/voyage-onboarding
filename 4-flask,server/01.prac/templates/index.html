@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Document</title>
+
+        <script>
+            function hey() {
+                fetch("/test")
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                    });
+
+                let formData = new FormData();
+                formData.append("title_give", "Avengers");
+
+                fetch("/test", { method: "POST", body: formData })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                    });
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="hey()">Button!</button>
+    </body>
+</html>
