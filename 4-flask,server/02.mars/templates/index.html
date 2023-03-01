@@ -73,8 +73,19 @@
 				fetch("/mars")
 					.then((res) => res.json())
 					.then((data) => {
-						console.log(data);
-						alert(data["msg"]);
+						$("#order-box").empty();
+						let results = data["result"];
+						results.forEach((a) => {
+							let name = a["name"];
+							let address = a["address"];
+							let size = a["size"];
+							let temp_html = `<tr>
+						                        <td>${name}</td>
+						                        <td>${address}</td>
+						                        <td>${size}</td>
+						                    </tr>`;
+							$("#order-box").append(temp_html);
+						});
 					});
 			}
 			function save_order() {
@@ -93,19 +104,6 @@
 						alert(data["msg"]);
 						window.location.reload();
 					});
-
-				// fetch("/mars").then(res => res.json()).then(data => {
-				//     $("#order-box").empty();
-				//     name
-				//     address
-				//     size
-				//     temp_html = `<tr>
-				//                     <td>${name}</td>
-				//                     <td>${address}</td>
-				//                     <td>${size}</td>
-				//                 </tr>`
-				//     $("#order-box").append(temp_html);
-				// })
 			}
 		</script>
 	</head>
@@ -132,11 +130,11 @@
 					<label class="input-group-text" for="size">Size</label>
 					<select class="form-select" id="size">
 						<option selected>-- Size Order --</option>
-						<option value="10unit">10 unit</option>
-						<option value="20unit">20 unit</option>
-						<option value="30unit">30 unit</option>
-						<option value="40unit">40 unit</option>
-						<option value="50unit">50 unit</option>
+						<option value="10unit">10unit</option>
+						<option value="20unit">20unit</option>
+						<option value="30unit">30unit</option>
+						<option value="40unit">40unit</option>
+						<option value="50unit">50unit</option>
 					</select>
 				</div>
 				<button

@@ -21,12 +21,13 @@ def mars_post():
         "size": size_receive
     }
 
-    db.orders.insert_one(order_info)
+    db.mars.insert_one(order_info)
     return jsonify({'msg':'Order successfully saved'})
 
 @app.route("/mars", methods=["GET"])
 def mars_get():
-    return jsonify({'msg':'GET completed!'})
+    mars_orders = list(db.mars.find({}, {'_id': False}))
+    return jsonify({'result': mars_orders})
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
