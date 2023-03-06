@@ -19,6 +19,10 @@
 # 출력
 # 프로그램은 표준 출력에 출력한다. 각 테스트 데이터마다 정확히 한 행을 출력하는데, 내용은 N 번째 손님에게 배정되어야 하는 방 번호를 출력한다.
 
+# Output
+# 402
+# 1203
+
 import sys, time
 start_time = time.time()
 sys.stdin = open("input.txt", "r")
