@@ -27,6 +27,19 @@ import sys, time
 start_time = time.time()
 sys.stdin = open("input.txt", "r")
 
+T = int(input())
+for _ in range(T):
+    H, W, N = map(int, input().split())
+
+    count = 0
+    for i in range(W):
+        for j in range(H):
+            count += 1
+            if count == N:
+                if j < 10:
+                    print(f"{i}0{j}")
+                else:
+                    print(f"{i}{j}")
 
 
 end_time = time.time()
