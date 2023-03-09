@@ -8,6 +8,8 @@ N = int(input())
 # 구분된 문자 한 줄에 입력 받기
 input().split()
 
+T = int(sys.stdin.readline())
+
 # 구분된 정수 한 줄에 입력 받기
 N, M = map(int, input().split())
 
