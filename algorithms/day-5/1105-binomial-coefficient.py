@@ -1,4 +1,4 @@
-import sys, time, collections
+import sys, time, collections, itertools
 start_time = time.time()
 sys.stdin = open("input.txt", "r")
 
@@ -24,7 +24,10 @@ def factorial(n):
 # collections.defaultdict / collections.OrderedDict[입력 순서대로 저장]
 # numerate
 
-# print(factorial(n)//(factorial(k)*(factorial(n-k))))
+# arr = [i for i in range(n)]
+# print(len(list(itertools.combinations(arr, k))))
+
+print(factorial(n)//(factorial(k)*(factorial(n-k))))
 
 
 end_time = time.time()
