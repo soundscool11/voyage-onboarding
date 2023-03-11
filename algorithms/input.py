@@ -35,3 +35,7 @@ for i in range(n):
 
 # 2차원 리스트 초기화
 arr = [[0] * M for _ in range(N)]
+
+# 리스트 초기화
+arr = [i for i in range(N)]
+arr = [0] * N

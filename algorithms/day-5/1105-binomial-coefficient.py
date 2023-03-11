@@ -22,7 +22,7 @@ def factorial(n):
 # itertools.permutations()
 # collections.Counter(arr).most_common()
 # collections.defaultdict / collections.OrderedDict[입력 순서대로 저장]
-# numerate
+# enumerate
 
 # arr = [i for i in range(n)]
 # print(len(list(itertools.combinations(arr, k))))
