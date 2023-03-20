@@ -19,3 +19,5 @@ for i in range(1, N+1):
             knapsack[i][j] = knapsack[i-1][j]
         else:
             knapsack[i][j] = max(knapsack[i-1][j], knapsack[i-1][j-w]+v)
+
+print(knapsack[N][K])
