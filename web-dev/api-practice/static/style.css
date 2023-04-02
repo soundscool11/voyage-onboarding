@@ -1,0 +1,11 @@
+* {
+    font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+button, .input {
+    font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.search {
+    margin: 4px 0 0 25px;
+}

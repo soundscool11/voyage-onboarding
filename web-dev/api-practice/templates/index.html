@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../static/style.css">
+        <script src="../static/index.js"></script>
+        <title>책 찾기</title>
+	</head>
+	<body>
+		<section class="hero is-link">
+			<div class="hero-body">
+				<p class="title">책 검색하기</p>
+				<p class="subtitle">Kakao Search open API를 통해 책 검색하기</p>
+			</div>
+		</section>
+		<div class="container is-max-desktop">
+			<div class="notification is-light" style="margin: 15px">
+				<div>
+					<input
+						class="input is-large"
+						type="text"
+						placeholder="책 제목을 입력하세요"
+						style="width: 80%"
+					/>
+					<button
+						class="search button is-link is-medium"
+						onclick="search_book()"
+					>
+						책 찾기
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="book container is-max-desktop">
+			
+		</div>
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>책 검색하기</strong> by
+					<a href="https://jgthms.com">Madang</a>. The source code is
+					licensed
+					<a href="http://opensource.org/licenses/mit-license.php"
+						>MIT</a
+					>. The website content is licensed
+					<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+						>CC BY NC SA 4.0</a
+					>.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
